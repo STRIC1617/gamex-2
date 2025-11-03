@@ -16,5 +16,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_GAMEX_2 }}
-          projectId: gamex-2
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MedhaGames_2 }}
+          projectId: MedhaGames-2
