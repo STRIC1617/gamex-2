@@ -1,1 +1,1 @@
-example.com, 123456789, DIRECT, f08c47fec0942fa0
+google.com, pub-2080254565783647, DIRECT, f08c47fec0942fa0

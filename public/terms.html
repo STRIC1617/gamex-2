@@ -3,15 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MedhaGames — Terms & Conditions</title>
+  <title>MedhaGames — Privacy Policy & Terms</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/script.js" defer></script>
+  <style>
+    .policies-container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .policies-nav {
+      position: sticky;
+      top: 120px;
+      height: fit-content;
+    }
+
+    .policies-nav ul {
+      list-style: none;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .policies-nav li {
+      margin: 0;
+    }
+
+    .policies-nav a {
+      display: block;
+      padding: 1rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .policies-nav li:last-child a {
+      border-bottom: none;
+    }
+
+    .policies-nav a:hover,
+    .policies-nav a.active {
+      background-color: var(--primary-color);
+      color: var(--bg-white);
+      font-weight: 600;
+    }
+
+    .policies-content {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+
+    .policy-section {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .policy-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .policy-section h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 1rem;
+    }
+
+    .policy-section h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .policy-section p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+
+    .policy-section ul,
+    .policy-section ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .policy-section li {
+      margin-bottom: 0.5rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    .policy-section strong {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .policies-container {
+        grid-template-columns: 1fr;
+      }
+
+      .policies-nav {
+        position: static;
+      }
+
+      .policies-nav ul {
+        display: flex;
+        gap: 0;
+        flex-wrap: wrap;
+      }
+
+      .policies-nav li {
+        flex: 1;
+        min-width: 150px;
+      }
+
+      .policies-nav a {
+        padding: 0.75rem;
+        text-align: center;
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+      }
+
+      .policies-nav li:last-child a {
+        border-right: none;
+      }
+
+      .policies-content {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="MedhaGames Logo" class="logo" />
+        <img src="images/logo.png" alt="MedhaGames" class="logo" />
       </a>
       <nav class="nav">
         <a href="index.html">Home</a>
@@ -23,48 +169,168 @@
   </header>
 
   <main class="container">
-    <h1 class="page-title">Terms &amp; Conditions</h1>
+    <h1 class="page-title">Policies</h1>
 
-    <section class="card" style="margin:18px 0; text-align:left;">
-      <h3>1. Acceptance of Terms</h3>
-      <p>By accessing or using the MedhaGames website, you agree to be bound by these Terms &amp; Conditions. If you do not agree, please discontinue use of the site.</p>
+    <div class="policies-container">
+      <!-- Navigation Sidebar -->
+      <nav class="policies-nav">
+        <ul>
+          <li><a href="#privacy" class="policy-link active" data-policy="privacy">Privacy Policy</a></li>
+          <li><a href="#terms" class="policy-link" data-policy="terms">Terms & Conditions</a></li>
+        </ul>
+      </nav>
 
-      <h3>2. Use of the Site</h3>
-      <p>The content on this site is provided for general information and promotional purposes for our games. You agree not to misuse the site or attempt to interfere with its normal operation.</p>
+      <!-- Content Area -->
+      <div class="policies-content">
+        <!-- Privacy Policy -->
+        <section id="privacy" class="policy-section active">
+          <h2>Privacy Policy</h2>
 
-      <h3>3. Intellectual Property</h3>
-      <p>All trademarks, logos, and content on this site are the property of their respective owners. You may not copy, reproduce, or distribute any part of the site without prior written consent.</p>
+          <p>Welcome to Medha Games! We are committed to protecting your privacy. This Privacy Policy describes how Medha Games ("Medha Games," "we," "us," or "our") collects, uses, and discloses information when you use our mobile applications (the "Apps") and our website (the "Website," and together with the Apps, the "Services").</p>
 
-      <h3>4. Links to Third‑Party Sites</h3>
-      <p>Our site may include links to third‑party websites (e.g., game pages). We are not responsible for the content or practices of those sites.</p>
+          <p>By using any of our Services, you consent to the processing of your personal information in accordance with this Policy.</p>
 
-      <h3>5. Disclaimer of Warranties</h3>
-      <p>This site is provided “as is” and “as available” without warranties of any kind. We do not guarantee that the site will be error‑free or uninterrupted.</p>
+          <h3>1. Information We Collect</h3>
+          <p>We may collect the following types of information:</p>
 
-      <h3>6. Limitation of Liability</h3>
-      <p>To the fullest extent permitted by law, MedhaGames will not be liable for any indirect, incidental, special, or consequential damages arising from your use of the site.</p>
+          <h3>A. Information You Provide to Us:</h3>
+          <ul>
+            <li><strong>Contact Information:</strong> When you contact us for support, send us feedback, or participate in a contest, we may collect information such as your name, email address, phone number, and the contents of your communication.</li>
+            <li><strong>Account Information:</strong> If you create an account, you may provide a username, password, and other profile information.</li>
+          </ul>
 
-      <h3>7. Changes to These Terms</h3>
-      <p>We may update these Terms from time to time. The updated version will be indicated by an updated “Last updated” date.</p>
+          <h3>B. Information We Collect Automatically:</h3>
+          <p>When you access and use our Services, we automatically collect information about your device and how you interact with our Apps and Website:</p>
+          <ul>
+            <li><strong>Device Information:</strong> We collect data about the device you use, including the IP address, device ID, device model, operating system, network type, and screen resolution.</li>
+            <li><strong>Usage Data:</strong> We collect information on how you use our games, such as your game progress, high scores, levels achieved, game preferences, feature usage, and the date and time of your activity.</li>
+            <li><strong>Analytics:</strong> We use third-party analytics tools (e.g., Google Analytics) to gather statistics about our Services, including pages visited, time spent, and referral websites.</li>
+            <li><strong>In-Game Purchases:</strong> We collect information about what you purchase within the game, but we do not collect or store your payment details (which are processed securely by third-party payment providers like the App Store or Google Play).</li>
+          </ul>
 
-      <h3>8. Governing Law</h3>
-      <p>These Terms are governed by the laws applicable in your jurisdiction unless otherwise required by law.</p>
+          <h3>C. Information from Third-Party Sources:</h3>
+          <ul>
+            <li><strong>Social Logins:</strong> If you log into our Apps using a third-party social network (like Facebook or Google), we may collect information shared through those platforms, such as your public profile name, profile picture, and email address.</li>
+          </ul>
 
-      <h3>9. Contact</h3>
-      <p>Questions about these Terms? Email us at <a href="mailto:contact@MedhaGames.com">contact@MedhaGames.com</a>.</p>
+          <h3>2. How We Use Your Information</h3>
+          <p>We use the information we collect for the following purposes:</p>
+          <ul>
+            <li><strong>To Provide and Maintain the Services:</strong> To operate, deliver, and improve our Apps and Website and to fulfill your requests.</li>
+            <li><strong>Game Development and Improvement:</strong> To analyze usage trends, better understand player demographics, optimize gameplay, and develop new features and games.</li>
+            <li><strong>Customer Support:</strong> To respond to your questions, comments, and support requests.</li>
+            <li><strong>Personalization:</strong> To tailor the content and advertising you see within our Services.</li>
+            <li><strong>Marketing Communications:</strong> To send you promotional materials, newsletters, and offers (you may opt out at any time).</li>
+            <li><strong>Security and Legal Compliance:</strong> To detect, prevent, and address fraud, technical issues, or other illegal activities, and to comply with our legal obligations.</li>
+          </ul>
 
-      <p style="color:var(--muted); margin-top:10px;">Last updated: 27 Oct 2025</p>
-    </section>
+          <h3>3. Sharing Your Information</h3>
+          <p>We do not sell your personal information. We only share it in the following limited circumstances:</p>
+          <ul>
+            <li><strong>Service Providers:</strong> We share information with third-party vendors and service providers (like hosting partners, analytics providers, and advertisers) who perform services on our behalf and are required to keep the information confidential.</li>
+            <li><strong>Social Features:</strong> If you use social features, we may share certain data (e.g., your game scores, in-game achievements, and profile picture) with your social network contacts so you can enjoy the social elements of the game.</li>
+            <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law, or in the good faith belief that such action is necessary to comply with a legal obligation or protect the rights or safety of Medha Games or others.</li>
+            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity.</li>
+          </ul>
+
+          <h3>4. Children's Privacy</h3>
+          <p>Our Services are generally designed for users over the age of 13. We do not knowingly collect personal information from children under the age of 13. If we become aware that we have inadvertently collected personal information from a child under 13, we will take reasonable steps to delete it as soon as possible.</p>
+
+          <h3>5. Your Rights and Choices</h3>
+          <ul>
+            <li><strong>Opt-Out of Marketing:</strong> You can opt-out of receiving promotional emails from us by following the "unsubscribe" link in those emails or by contacting us directly.</li>
+            <li><strong>Access/Delete Data:</strong> Depending on your jurisdiction, you may have the right to request access to the personal information we hold about you or request that we delete it.</li>
+          </ul>
+
+          <h3>6. Contact Us</h3>
+          <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+          <p><strong>Email:</strong> support@medhagames.com</p>
+        </section>
+
+        <!-- Terms & Conditions -->
+        <section id="terms" class="policy-section">
+          <h2>Terms & Conditions</h2>
+
+          <p>These Terms and Conditions ("Terms") govern your access to, downloading, and use of the services provided by Medha Games ("Medha Games," "we," "us," or "our"), including our mobile applications ("Apps") and website ("Website") (collectively, the "Services").</p>
+
+          <p>By accessing or using any of the Services, you confirm that you accept these Terms and agree to be bound by them. If you do not agree to these Terms, you must not use the Services.</p>
+
+          <h3>1. Acceptance of Terms</h3>
+          <p>These Terms constitute a legally binding agreement between you and Medha Games. These Terms incorporate by reference our Privacy Policy, which also applies to your use of the Services.</p>
+
+          <h3>2. User Accounts</h3>
+          <ul>
+            <li>Some parts of our Services may require you to create an account. You are responsible for maintaining the confidentiality of your password and for all activities that occur under your account.</li>
+            <li>You agree to provide accurate and current information when creating an account.</li>
+            <li>Each account is for individual use only and is non-transferable. Medha Games reserves the right to terminate any account we believe is being used by multiple users.</li>
+          </ul>
+
+          <h3>3. Intellectual Property Rights</h3>
+          <p>All content, features, and functionality within the Services, including games, software, images, text, graphics, logos, and digital downloads, are the property of Medha Games or its content suppliers and are protected by international copyright, trademark, patent, and other intellectual property laws.</p>
+
+          <p>You are granted a limited, non-exclusive, non-transferable, revocable license to use the Services for your personal, non-commercial entertainment purposes, subject to these Terms.</p>
+
+          <h3>4. User Conduct and Restrictions</h3>
+          <p>You agree not to use the Services for any unlawful purpose or in any way that could damage, disable, overburden, or impair the Services. Specifically, you agree not to:</p>
+          <ul>
+            <li>Copy, modify, reverse engineer, or create derivative works of the Services.</li>
+            <li>Use any automated system, including bots, scripts, or spiders, to access, harvest, or disrupt the Services.</li>
+            <li>Attempt to gain unauthorized access to any part of the Services, accounts, or computer systems connected to the Services.</li>
+            <li>Transmit any unsolicited advertising, junk mail, or spam.</li>
+            <li>Post or upload any content that is abusive, defamatory, harassing, or otherwise objectionable.</li>
+          </ul>
+
+          <h3>5. Virtual Items and Currency</h3>
+          <ul>
+            <li>Within our Apps, you may be able to purchase or earn virtual items or currency ("Virtual Items").</li>
+            <li>Virtual Items are a limited, non-transferable, revocable license to use certain features within the Apps.</li>
+            <li>Virtual Items have no monetary value and cannot be redeemed for real money, goods, or other items of monetary value from Medha Games or any other party.</li>
+            <li>All purchases of Virtual Items are final and non-refundable, except at our sole discretion and subject to the applicable app store's policy (e.g., Apple App Store or Google Play Store).</li>
+          </ul>
+
+          <h3>6. Disclaimer of Warranties</h3>
+          <p>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED. Medha Games specifically disclaims all warranties, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+          <h3>7. Limitation of Liability</h3>
+          <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MEDHA GAMES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, ARISING FROM YOUR USE OF THE SERVICES.</p>
+
+          <h3>8. Modifications to the Terms</h3>
+          <p>We reserve the right to modify these Terms at any time. We will notify you of changes by posting the revised Terms on our Website or within the Apps. Your continued use of the Services following the posting of the revised Terms indicates your acceptance of the changes.</p>
+
+          <h3>9. Governing Law and Dispute Resolution</h3>
+          <p>These Terms shall be governed by and construed in accordance with the laws of the applicable jurisdiction, without regard to its conflict of law principles. Any legal action or proceeding arising under these Terms will be brought exclusively in the courts located in the applicable jurisdiction.</p>
+
+          <h3>10. Contact Information</h3>
+          <p>If you have any questions regarding these Terms, please contact us at:</p>
+          <p><strong>Email:</strong> support@medhagames.com</p>
+        </section>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2025 MedhaGames. All rights reserved.</p>
-      <div style="display:flex; gap:12px;">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms &amp; Conditions</a>
-      </div>
+      <a href="policies.html">Policies</a>
     </div>
   </footer>
+
+  <script>
+    // Policy navigation
+    document.querySelectorAll('.policy-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Remove active class from all links and sections
+        document.querySelectorAll('.policy-link').forEach(l => l.classList.remove('active'));
+        document.querySelectorAll('.policy-section').forEach(s => s.classList.remove('active'));
+        
+        // Add active class to clicked link and corresponding section
+        link.classList.add('active');
+        const policyId = link.getAttribute('data-policy');
+        document.getElementById(policyId).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
