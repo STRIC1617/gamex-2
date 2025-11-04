@@ -3,47 +3,304 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MedhaGames — Home</title>
+  <meta name="description" content="MedhaGames - Your hub for fast, lightweight, and fun games. Download Ball Roll Maze and more!" />
+  <title>MedhaGames — Fast & Fun Games</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/script.js" defer></script>
+  <style>
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: var(--bg-white);
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .hero .accent {
+      color: #fbbf24;
+      display: inline-block;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin: 0;
+      opacity: 0.95;
+      max-width: 600px;
+    }
+
+    .hero .btn {
+      background-color: var(--bg-white);
+      color: var(--primary-color);
+      padding: 1rem 2.5rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .hero .btn:hover {
+      background-color: #fbbf24;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 5rem 0;
+      background-color: var(--bg-light);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--bg-white);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .card p {
+      color: var(--text-light);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Featured Game Section */
+    .featured {
+      padding: 5rem 0;
+    }
+
+    .featured h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: var(--text-dark);
+    }
+
+    .featured-game {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      background-color: var(--bg-light);
+      padding: 3rem;
+      border-radius: 12px;
+    }
+
+    .featured-game-image {
+      text-align: center;
+    }
+
+    .featured-game-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .featured-game-content h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .featured-game-content p {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .featured-game-content .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--bg-white);
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .featured-game-content .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* CTA Section */
+    .cta {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+      color: var(--bg-white);
+      padding: 4rem 0;
+      text-align: center;
+      margin: 5rem 0 0 0;
+    }
+
+    .cta h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--bg-white);
+    }
+
+    .cta p {
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta .btn {
+      background-color: #fbbf24;
+      color: var(--text-dark);
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .cta .btn:hover {
+      background-color: var(--bg-white);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .featured-game {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .featured-game-content h3 {
+        font-size: 1.5rem;
+      }
+
+      .featured h2,
+      .cta h2 {
+        font-size: 2rem;
+      }
+
+      .cta p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="btn" href="index.html">MedhaGames</a>
+      <a class="btn" href="index.html">
+        MedhaGames
+      </a>
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="games.html">Games</a>
         <a href="contact.html">Contact</a>
-        <a href="terms.html">Terms & Conditions</a>
+        <a href="terms.html">Policies</a>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container hero-inner">
         <h1>Welcome to <span class="accent">MedhaGames</span></h1>
-        <p>Your hub for fast, lightweight, and fun games.</p>
+        <p>Your hub for fast, lightweight, and fun games that work everywhere.</p>
         <a class="btn" href="games.html">See Our Games</a>
       </div>
     </section>
 
+    <!-- Features Section -->
     <section class="features">
-      <div class="container grid-3">
-        <div class="card">
-          <h3>Lightweight</h3>
-          <p>Pure HTML/CSS/JS with blazing load speed.</p>
+      <div class="container">
+        <div class="grid-3">
+          <div class="card">
+            <h3>⚡ Lightweight</h3>
+            <p>Pure HTML/CSS/JS with blazing fast load speeds. Get playing in seconds.</p>
+          </div>
+          <div class="card">
+            <h3>📱 Responsive</h3>
+            <p>Plays great on mobile, tablet, and desktop. One game, all devices.</p>
+          </div>
+          <div class="card">
+            <h3>🔒 Privacy-first</h3>
+            <p>Clear policies and simple contact options. We respect your privacy.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Responsive</h3>
-          <p>Looks great on mobile, tablet, and desktop.</p>
+      </div>
+    </section>
+
+    <!-- Featured Game Section -->
+    <section class="featured container">
+      <h2>Our Games</h2>
+      <div class="featured-game">
+        <div class="featured-game-image">
+          <img src="images/ball-roll-maze.jpg" alt="Ball Roll Maze Game" />
         </div>
-        <div class="card">
-          <h3>Privacy-first</h3>
-          <p>Clear policy and simple contact options.</p>
+        <div class="featured-game-content">
+          <h3>Ball Roll Maze</h3>
+          <p>Test your reflexes and skills in this addictive puzzle adventure. Navigate through challenging mazes, solve intricate puzzles, and become the ultimate maze master!</p>
+          <p><strong>Features:</strong> Multiple difficulty levels, smooth controls, leaderboards, and engaging gameplay that keeps you coming back for more.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.medhagames.ballrollmaze" target="_blank" rel="noopener" class="btn">Download Now</a>
         </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Play?</h2>
+        <p>Join thousands of players enjoying our games. Download Ball Roll Maze today and see what you've been missing!</p>
+        <a href="games.html" class="btn">Explore All Games</a>
       </div>
     </section>
   </main>
@@ -51,8 +308,12 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2025 MedhaGames. All rights reserved.</p>
-      <a href="terms.html">Terms & Conditions</a>
+      <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end;">
+        <a href="terms.html">Privacy & Terms</a>
+        <a href="contact.html">Contact</a>
+        <a href="app-ads-setup.html">Developer Resources</a>
+      </div>
     </div>
-
+  </footer>
 </body>
 </html>
